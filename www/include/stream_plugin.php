@@ -28,6 +28,15 @@ if(isset($_GET["file"]) && isset($_GET["choice"]))
 					</object>
 				 </center>
 		';
+        }
+        elseif($stream_choice == 2)
+        {
+                echo '
+                                <center>
+                                        <video width="640px" height="360px" src="'.$file .'" controls autoplay/>
+                                        </video>
+                                </center>
+                ';
 	}
 }
 
