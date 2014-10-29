@@ -112,17 +112,17 @@ $nb_slash = sizeof($url_slash)-1;
 					
 					if (!supports_video())
 					{ 
-						$("#stream").load("./include/stream_plugin.php?file='.$file.'&choice='.$stream_choice.'", function() { });
+						$("#stream").load("./include/stream_plugin.php?file='.urlencode($file).'&choice='.$stream_choice.'", function() { });
 					}
 					else
 					{
 						if ((supports_mp41() == "probably") && (supports_mp42() == "probably") && (supports_mp43() == "probably") && (supports_mp44() == "probably"))
 						{ 
-							$("#stream").load("./include/stream_html5.php?file='.$file.'&type=mp4", function() { });
+							$("#stream").load("./include/stream_html5.php?file='.urlencode($file).'&type=mp4", function() { });
 						}
 						else
 						{
-							$("#stream").load("./include/stream_plugin.php?file='.$file.'&choice='.$stream_choice.'", function() { });
+							$("#stream").load("./include/stream_plugin.php?file='.urlencode($file).'&choice='.$stream_choice.'", function() { });
 						}
 					}
 					
@@ -138,17 +138,17 @@ $nb_slash = sizeof($url_slash)-1;
 					
 					if (!supports_video())
 					{ 
-						$("#stream").load("./include/stream_plugin.php?file='.$file.'&choice='.$stream_choice.'", function() { });
+						$("#stream").load("./include/stream_plugin.php?file='.urlencode($file).'&choice='.$stream_choice.'", function() { });
 					}
 					else
 					{
 						if (supports_mkv() == "probably")
 						{ 
-							$("#stream").load("./include/stream_html5.php?file='.$file.'&type=mkv", function() { });
+							$("#stream").load("./include/stream_html5.php?file='.urlencode($file).'&type=mkv", function() { });
 						}
 						else
 						{
-							$("#stream").load("./include/stream_plugin.php?file='.$file.'&choice='.$stream_choice.'", function() { });
+							$("#stream").load("./include/stream_plugin.php?file='.urlencode($file).'&choice='.$stream_choice.'", function() { });
 						}
 					}
 					
@@ -161,7 +161,7 @@ $nb_slash = sizeof($url_slash)-1;
 				<script type="text/javascript">
 				$(document).ready(function(){
 					$("#content-stream").show();
-					$("#stream").load("./include/stream_plugin.php?file='.$file.'&choice='.$stream_choice.'", function() { });
+					$("#stream").load("./include/stream_plugin.php?file='.urlencode($file).'&choice='.$stream_choice.'", function() { });
 				});
 				</script>
 			';
