@@ -14,7 +14,7 @@
 include("./include/config.php");
 
 // ------------------------------
-// Vérif connexion
+// VÃ©rif connexion
 // ------------------------------
 
 if(time()-($_SESSION['Date']) > $time_session )
@@ -81,6 +81,12 @@ switch($action)
 			break;
 			case 1:
 				$select="1";
+				$username = $connexion->quote($_SESSION['login']); 
+				$selection = $connexion->quote($select); 
+				$count = $connexion->exec("UPDATE users SET userstream = $selection WHERE username = $username");
+			break;
+			case 2:
+				$select="2";
 				$username = $connexion->quote($_SESSION['login']); 
 				$selection = $connexion->quote($select); 
 				$count = $connexion->exec("UPDATE users SET userstream = $selection WHERE username = $username");
