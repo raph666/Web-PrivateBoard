@@ -50,6 +50,7 @@ else{ $style = "---"; }
 
 if($ligne->userstream == "0"){ $stream = "Plugin web VLC media player"; }
 elseif($ligne->userstream == "1"){ $stream = "Plugin web Divx web player"; }
+elseif($ligne->userstream == "1"){ $stream = "Plugin web HTML5 web player"; }
 
 if($ligne->userfilename == "0"){ $filename = "Noms des fichiers simplifiés"; }
 elseif($ligne->userfilename == "1"){ $filename = "Noms des fichiers torrents"; }
@@ -80,6 +81,7 @@ elseif($ligne->userfilename == "1"){ $filename = "Noms des fichiers torrents"; }
 			  <select name="stream">
 			    <option value="0">Plugin web VLC media player</option>
 			    <option value="1">Plugin web Divx web player</option>
+			    <option value="2">Plugin web HTML5 web player</option>
 			  </select>
 			  <input type="submit" value="Valider"  class="valide" />
 			</form>
