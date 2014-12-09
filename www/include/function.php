@@ -507,6 +507,7 @@ function detect_chaine($chaine, $type)
         		                  "/\.cue/i", 
         		                  "/\.sub/i",
         		                  "/\.idx/i", 
+        		                  "/\.m2ts/i",
         		                  "/\.sessions/i", 
         		                  "/\.htpasswd/i", 
         		                  "/\.htgroup/i", 
